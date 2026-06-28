@@ -69,8 +69,6 @@
             font-family: 'Noto Sans JP', sans-serif;
             overflow-x: hidden;
             position: relative;
-            perspective: 1400px;
-            perspective-origin: 50% 30%;
         }
 
         .font-logo { font-family: 'Outfit', sans-serif; }
@@ -365,6 +363,8 @@
             padding: 120px 20px 60px;
             position: relative;
             transform-style: preserve-3d;
+            perspective: 1200px;
+            perspective-origin: 50% 35%;
         }
 
         .hero-kicker {
@@ -1202,7 +1202,7 @@
                     const d = parseFloat(l.dataset.depth || 1);
                     l.style.transform = `translate3d(${cx * 22 * d}px, ${cy * 22 * d}px, 0)`;
                 });
-                if (hero) hero.style.transform = `rotateY(${cx * 5}deg) rotateX(${-cy * 5}deg)`;
+                if (hero) hero.style.transform = `perspective(1200px) rotateY(${cx * 5}deg) rotateX(${-cy * 5}deg)`;
                 requestAnimationFrame(loop);
             })();
         })();
